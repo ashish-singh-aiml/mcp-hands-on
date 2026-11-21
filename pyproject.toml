@@ -1,0 +1,23 @@
+[project]
+name = "mcp-hands-on"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "ashish-singh-aiml", email = "ashish.singh.aiml@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+mcp-hands-on = "mcp_hands_on:main"
+
+[tool.uv]
+# Smart App Control blocks uv's unsigned managed Python builds; use the signed python.org install
+python-preference = "only-system"
+# uv cache is on C:, project on D:, so hardlinks aren't possible
+link-mode = "copy"
+
+[build-system]
+requires = ["uv_build>=0.12.0,<0.13.0"]
+build-backend = "uv_build"
